@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Bubble Love";
+  src: url("./fonts/BubbleLove.otf") format("opentype"),
+    url("./fonts/BubbleLove.otf") format("opentype");
+}
