@@ -28,8 +28,8 @@ export default defineComponent({
   },
   setup(props, { emit }) {
     const handleVowels = (vowelsEvent: Event) => {
-      const target = vowelsEvent.target as HTMLInputElement
-      target && emit("optionsUpdate", { vowels: parseInt(target.value) })
+      const target = vowelsEvent.target as HTMLInputElement;
+      target && emit("optionsUpdate", { vowels: parseInt(target.value) });
     };
 
     return { handleVowels };
