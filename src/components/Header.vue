@@ -3,8 +3,8 @@
     <h1 class="text-2xl lg:text-5xl text-pink-dark text-center">
       Cat name creator
     </h1>
-    <span class="hidden lg:flex mt-3"
-      >Créez un nom unique pour votre chat !</span
+    <span class="hidden lg:flex mt-3 text-gray-600"
+      >Donnez un nom unique pour votre chat !</span
     >
     <Kitty class="logo" />
   </div>

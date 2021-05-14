@@ -35,6 +35,7 @@
       class="remove-letter"
       tabindex="0"
       role="button"
+      aria-label="Remove a letter"
     >
       <IconMinus class="stroke-current stroke-2" />
     </div>
@@ -49,7 +50,7 @@
       class="add-letter"
       tabindex="0"
       role="button"
-      aria-pressed="true"
+      aria-label="Add a letter"
     >
       <IconPlus class="stroke-current stroke-2" />
     </div>
@@ -176,7 +177,7 @@ export default defineComponent({
 }
 
 .name-length {
-  @apply text-gray-400 w-32 text-center text-xl;
+  @apply text-gray-600 w-32 text-center text-xl;
 }
 
 .unlock {
