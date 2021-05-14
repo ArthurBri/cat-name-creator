@@ -3,7 +3,7 @@
     <div class="option">
       <p class="text-md text-pink-dark mb-1">Voyelles</p>
       <input
-        @change="() => handleVowels"
+        @change="handleVowels"
         class="option-input"
         type="number"
         :max="length"
@@ -17,10 +17,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-type HTMLElementEvent<T extends HTMLElement> = Event & {
-  target: T;
-};
-
 export default defineComponent({
   name: "Options",
   emits: ["optionsUpdate"],
@@ -31,11 +27,9 @@ export default defineComponent({
     },
   },
   setup(props, { emit }) {
-    const handleVowels = (vowelsEvent: HTMLElementEvent<HTMLInputElement>) => {
-      const { target } = vowelsEvent;
-      if (target) {
-        emit("optionsUpdate", { vowels: parseInt(target.value) });
-      }
+    const handleVowels = (vowelsEvent: Event) => {
+      const target = vowelsEvent.target as HTMLInputElement
+      target && emit("optionsUpdate", { vowels: parseInt(target.value) })
     };
 
     return { handleVowels };
