@@ -119,8 +119,7 @@ h1 {
 }
 
 #app {
-  @apply bg-pink h-screen py-10 lg:py-20;
-  touch-action: none;
+  @apply bg-pink min-h-screen py-10 lg:py-20;
 }
 
 .wrapper {

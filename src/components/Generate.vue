@@ -36,5 +36,6 @@ export default defineComponent({
 <style scoped>
 .generate-name {
   @apply rounded-md p-5 py-2 bg-pink-dark w-32 text-xl text-white outline-none focus:ring-2 ring-gray-400;
+  touch-action: none;
 }
 </style>

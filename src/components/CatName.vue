@@ -20,10 +20,10 @@
         v-if="isFixedLetter(index)"
         @click="unlockLetter(index)"
       >
-        <IconLock class="h-5 stroke-current p-0.5" />
+        <IconLock class="icon light p-1" />
       </div>
       <div class="lock" v-else @click="lockLetter(index)">
-        <IconLock class="h-5 stroke-current p-0.5" />
+        <IconLock class="icon light p-1" />
       </div>
     </div>
   </transition-group>
@@ -37,7 +37,7 @@
       role="button"
       aria-label="Remove a letter"
     >
-      <IconMinus class="stroke-current stroke-2" />
+      <IconMinus class="icon" />
     </div>
     <div class="name-length">
       {{ uppercaseName.length }}
@@ -52,7 +52,7 @@
       role="button"
       aria-label="Add a letter"
     >
-      <IconPlus class="stroke-current stroke-2" />
+      <IconPlus class="icon" />
     </div>
   </div>
 </template>
@@ -140,7 +140,7 @@ export default defineComponent({
 }
 
 .letters {
-  @apply flex m-auto h-auto items-center w-64 lg:w-full overflow-scroll;
+  @apply flex m-auto h-auto items-center w-64 lg:w-full overflow-auto;
 }
 
 .letters::before,
@@ -186,7 +186,15 @@ export default defineComponent({
 
 .lock {
   @apply rounded-md w-6 h-6 text-pink-dark flex justify-center items-center
-  cursor-pointer mt-2 hover:bg-pink-dark hover:text-white transition duration-200;
+  cursor-pointer mt-2 hover:bg-white active:bg-pink-dark active:text-white transition duration-200;
+}
+
+.icon {
+  @apply w-full h-full stroke-current stroke-2;
+}
+
+.icon.light {
+  @apply stroke-1;
 }
 
 @keyframes pop {
